@@ -1,5 +1,6 @@
   {
       "appname": "hitos",
+      "port" : "31415",
       "serializer": "JSON",
       "logger": "File",
       "engines" : {

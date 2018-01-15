@@ -6,7 +6,11 @@ use Dancer2;
 use File::Slurper qw(read_text);
 
 set content_type => 'application/json';
-
+set logger => "File";
+set port => 31415;
+set engines => { logger => { File => { log_level => "core",
+				       log_dir => ".",
+				       file_name => "p5hitos.log" }}};
 my $path;
 for my $p ( qw( hitos.json /data/hitos.json ./data/hitos.json ../data/hitos.json) ) {
   if ( -r $p ) {
@@ -24,4 +28,4 @@ get '/all' => sub {
   return to_json $hitos;
 };
 
-start;
+dance;
