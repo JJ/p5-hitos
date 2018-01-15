@@ -18,4 +18,8 @@ get '/status' => sub {
   return to_json { status => 'OK' };
 };
 
+get '/all' => sub {
+  return to_json $hitos;
+};
+
 start;
