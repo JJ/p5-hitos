@@ -1,8 +1,7 @@
-
-appname: "[d2% appname %2d]"
+logger : "File"
 engines:
   logger:
     File:
-      log_level: info
+      log_level: core
       log_dir: "/tmp"
       file_name: "p5hitos.log"

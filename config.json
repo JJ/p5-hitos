@@ -1,0 +1,14 @@
+  {
+      "appname": "hitos",
+      "serializer": "JSON",
+      "logger": "File",
+      "engines" : {
+	  "logger" : {
+	      "File" : {
+		  "log_level": "core",
+		  "log_dir": "/tmp",
+		  "file_name": "p5hitos.log"
+	      }
+	  }
+      }
+  }
