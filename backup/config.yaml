@@ -1,0 +1,8 @@
+
+appname: "[d2% appname %2d]"
+engines:
+  logger:
+    File:
+      log_level: info
+      log_dir: "/tmp"
+      file_name: "p5hitos.log"

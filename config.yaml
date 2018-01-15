@@ -1,6 +1,0 @@
-logger: File
-engines:
-    logger:
-      File:
-        log_dir: "/log"
-        file_name: "p5hitos.log"
