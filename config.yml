@@ -5,5 +5,5 @@ engines:
   logger:
     File:
       log_level: core
-      log_dir: "/tmp"
+      log_dir: "/log"
       file_name: "p5hitos.log"
