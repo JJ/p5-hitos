@@ -2,4 +2,5 @@ FROM busybox
 
 WORKDIR /data
 VOLUME /data
-COPY ../hitos.json .
+COPY hitos.json .
+
