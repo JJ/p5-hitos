@@ -15,7 +15,7 @@ set engines => {
 				   }
 			  }
 	       };
-set logger => 'file';
+set logger => 'File';
 
 my $path;
 for my $p ( qw( hitos.json /data/hitos.json ./data/hitos.json ../data/hitos.json) ) {
