@@ -5,8 +5,6 @@ use v5.14;
 use Dancer2;
 use File::Slurper qw(read_text);
 
-set content_type => 'application/json';
-
 my $path;
 for my $p ( qw( hitos.json /data/hitos.json ./data/hitos.json ../data/hitos.json) ) {
   if ( -r $p ) {

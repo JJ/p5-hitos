@@ -1,5 +1,6 @@
-logger : "File"
+logger: "File"
 port: 31415
+content_type: "application/json"
 engines:
   logger:
     File:
