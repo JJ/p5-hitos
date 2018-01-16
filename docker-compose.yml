@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  config:
+    build: config
+  web:
+    build: .
+    ports:
+      - "80:5000"
+    volumes_from:
+      - config:ro
+  
