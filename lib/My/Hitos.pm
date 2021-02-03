@@ -7,8 +7,6 @@ for my $c (keys %config) {
   set $c => $config{$c}
 }
 
-prefix undef;
-
 get '/status' => sub {
   return to_json { status => 'OK' };
 };

@@ -23,5 +23,6 @@ docker build . -t jjmerelo/p5hitos/app
 > Arranca la aplicación
 
 ~~~sh
-plackup hitos.pl
+plackup hitos.psgi --pid /tmp/hitos.pid
 ~~~
+
