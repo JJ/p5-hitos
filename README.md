@@ -15,4 +15,6 @@ Este repo usa [`mask`](https://github.com/jakedeichert/mask) como
 Con estos comandos se construyen dos imágenes (datos y aplicación)
 usando podman o Docker, según se desee o se tenga instalado.
 
+### `start`
 
+Inicializa la aplicación, lanzándola con un solo *worker*
