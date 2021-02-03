@@ -6,7 +6,6 @@ use Dancer2;
 use My::Hitos::Config qw($hitos %config);
 
 for my $c (keys %config) {
-  say "Sets $c do $config{$c}";
   set $c => $config{$c}
 }
 
