@@ -24,7 +24,7 @@ our %CONFIG_DEFAULTS = ( log_dir => "/tmp" );
 
 our %config;
 for my $c (CONFIG_VARIABLES) {
-  $config{$c} = $ENV{$c} // $CONFIG_DEFAULTS{$c};
+  $config{$c} = $ENV{"P5HITOS_$c"} // $CONFIG_DEFAULTS{$c};
 }
 
 

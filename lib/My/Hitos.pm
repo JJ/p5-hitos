@@ -3,6 +3,10 @@ package My::Hitos;
 use Dancer2;
 use My::Hitos::Config qw($hitos %config);
 
+for my $c (keys %config) {
+  set $c => $config{$c}
+}
+
 get '/status' => sub {
   return to_json { status => 'OK' };
 };

@@ -5,4 +5,5 @@ use lib;
 
 use Dancer2 appname => 'My::Hitos';
 
+prefix undef;
 dance;

@@ -17,3 +17,11 @@ podman build -f Dockerfile -t jjmerelo/p5hitos/app
 docker build config/ -f Dockerfile -t jjmerelo/p5hitos/data
 docker build . -t jjmerelo/p5hitos/app
 ~~~
+
+## start
+
+> Arranca la aplicación
+
+~~~sh
+plackup hitos.pl
+~~~
