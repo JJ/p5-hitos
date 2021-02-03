@@ -10,7 +10,6 @@ jobs:
       - name: Install modules by apt
         run: sudo apt-get install cpanminus
       - name: Prepare for tests
-        run: |
-          cpanm --installdeps .
+        run: sudo cpanm --installdeps .
       - name: Perform tests
         run: prove
