@@ -19,8 +19,11 @@ for my $p ( qw( hitos.json /config/hitos.json ./config/hitos.json ../config/hito
 
 our $hitos = from_json read_text($path);
 
-use constant CONFIG_VARIABLES => qw( log_dir );
-our %CONFIG_DEFAULTS = ( log_dir => "/tmp" );
+use constant CONFIG_VARIABLES => qw( port log_dir log_level file_name );
+our %CONFIG_DEFAULTS = ( log_dir => "/tmp",
+                         port => 31415,
+                         log_level => 'core',
+                         file_name => 'hitos.log' );
 
 our %config;
 for my $c (CONFIG_VARIABLES) {
