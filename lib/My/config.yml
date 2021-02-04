@@ -1,9 +1,0 @@
----
-port: 31415
-content_type: "application/json"
-engines:
-  logger:
-    File:
-      log_level: core
-      file_name: "p5hitos.log"
-logger: "File"
