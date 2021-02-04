@@ -9,6 +9,9 @@ for my $c (keys %config) {
   set $c => $config{$c}
 }
 
+set log_dir => '/tmp';
+set port => 31415;
+
 get '/status' => sub {
   return to_json { status => 'OK' };
 };
