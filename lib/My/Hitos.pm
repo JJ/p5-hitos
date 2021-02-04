@@ -9,7 +9,9 @@ for my $c (keys %config) {
   set $c => $config{$c}
 }
 
-set content_type => 'application/json';
+set 'content_type' => 'application/json';
+set 'engine' => 'logger';
+set 'logger' => 'file';
 
 say setting('log_dir');
 
