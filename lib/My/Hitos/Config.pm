@@ -1,10 +1,12 @@
 package My::Hitos::Config;
 
+use lib qw(lib);
+
 use strict;
 use warnings;
 use v5.10;
 
-use Dancer2;
+use Dancer2 appname => "My::Hitos";
 use File::Slurper qw(read_text);
 use Exporter 'import';
 
