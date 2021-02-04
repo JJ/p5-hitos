@@ -1,6 +1,6 @@
 FROM perl:latest
 RUN mkdir /myapp
-COPY config.yml cpanfile config/hitos.json hitos.pl /myapp/
+ADD cpanfile config/hitos.json hitos.psgi lib /myapp/
 WORKDIR /myapp
 RUN cpanm --installdeps .
 CMD [ "plackup", "./hitos.pl" ]
