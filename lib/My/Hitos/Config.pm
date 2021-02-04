@@ -6,7 +6,7 @@ use strict;
 use warnings;
 use v5.10;
 
-use Dancer2 appname => "My::Hitos";
+use JSON;
 use File::Slurper qw(read_text);
 use Exporter 'import';
 

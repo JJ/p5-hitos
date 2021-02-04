@@ -15,8 +15,6 @@ set 'content_type' => 'application/json';
 set 'engine' => 'logger';
 set 'logger' => 'file';
 
-say setting('log_dir');
-
 get '/status' => sub {
   return to_json { status => 'OK' };
 };
