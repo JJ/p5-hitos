@@ -24,7 +24,7 @@ our $hitos = from_json read_text($path);
 use constant CONFIG_VARIABLES => qw( port log_dir log_level file_name );
 our %CONFIG_DEFAULTS = ( log_dir => "/tmp",
                          port => 31415,
-                         log_level => 'core',
+                         log_level => 'debug',
                          file_name => 'hitos.log' );
 
 our %config;
