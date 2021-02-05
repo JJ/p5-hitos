@@ -1,4 +1,4 @@
-requires "Dancer2";
+requires "Mojolicious::Lite";
 requires "JSON";
 requires "File::Slurper";
 requires "Plack";
