@@ -3,7 +3,6 @@
 use v5.14;
 use lib qw(lib);
 
-use Mojo::Base -strict;
 use Mojolicious::Commands;
 
 # Start command line interface for application

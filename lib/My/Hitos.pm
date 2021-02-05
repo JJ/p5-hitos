@@ -7,6 +7,8 @@ use My::Hitos::Config qw($hitos %config);
 
 sub startup( $self ) {
 
+  $self->log->path( "$config{'log_dir'}/$config{'file_name'}" );
+  $self->log->level( 'debug' );
   my $routes = $self->routes;
   $routes->get( '/status' => sub ($c) {
     $c->render( json => { status => 'OK' } );

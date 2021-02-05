@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install modules by apt
         run: sudo apt-get install cpanminus libfile-slurper-perl libjson-perl
-      - name: Prepare for tests
+      - name: Prepare for tests - install the rest
         run: sudo cpanm --installdeps .
       - name: Perform tests
         run: prove -l
