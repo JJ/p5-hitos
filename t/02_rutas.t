@@ -1,26 +1,25 @@
 use Test::More; # -*- mode: cperl -*-
 
-use lib qw(lib);
+use lib qw(. lib);
 use My::Hitos;
-use Plack::Test;
-use HTTP::Request::Common;
+use Test::Mojo;
 use JSON;
 
-my $app  = My::Hitos->to_app;
+my $fn;
+if ( -f 'hitos.psgi' ) {
+  $fn = 'hitos.psgi';
+} else {
+  $fn = '../hitos.psgi';
+}
 
-test_psgi $app, sub {
-  my $cb  = shift;
+my $t = Test::Mojo->new(Mojo::File->new($fn));
+$t->ua->max_redirects(1);
 
-  my $res = $cb->(GET "/status");
-  is $res->code, 200, 'Status OK';
-  my $status = from_json $res->content;
-  is $status->{'status'}, "OK", 'Status devuelto correctamente';
+$t->get_ok("/status")
+  ->status_is(200)
+  ->json_is( '/status' => 'OK' );
 
-  $res = $cb->(GET "/all");
-  is $res->code, 200, 'Status OK';
-  my $all = from_json $res->content;
-  cmp_ok keys %$all, ">", 1, 'Devuelve todos los hitos';
-
-};
+$t->get_ok("/all")
+  ->status_is(200);
 
 done_testing;
